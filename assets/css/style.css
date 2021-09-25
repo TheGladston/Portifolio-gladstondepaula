@@ -3,10 +3,10 @@
 
 /* Varíaveis de cores e fontes */
 :root {
-    --cor-1: #fbfbfb;
-    --cor-2: #303030;
+    --cor-1: #fafafa;
+    --cor-2: #060606;
     --cor-3: #9ed8dc;
-    --cor-4: #878787;
+    --cor-4: #dfdfdf;
 
     --font-default: 'Montserrat', 'opens sans', sans-serif;
 }
@@ -40,13 +40,10 @@
                 0 4px 8px 0 rgba(0,0,0,.05);
 }
 
-/* Navbar */
+/* Fim Reutilizáveis */
 
-.header {
-    width: 90%;
-    height: 5.75rem;
-    margin: auto;
-}
+
+/* Navbar */
 
 .logo {
     font-family: var(--font-default);
@@ -135,3 +132,147 @@
 /* Fim Responsivo Navbar */
 
 /* Fim Navbar */
+
+
+/* Main */
+
+main {
+    background: #fff;
+}
+
+.principal {
+    position: relative;
+    width: 100%;
+    height: 44rem;
+    background: var(--cor-3);
+    padding: 2rem;
+    box-shadow: 0 3px 4px 0 rgba(0,0,0,.07),
+                0 3px 8px 0 rgba(0,0,0,.07);
+}
+
+.img-wrap {
+    text-align: center;
+    padding-top: 2rem;
+    position: relative;
+}
+
+#principal-content h1{
+    position: absolute;
+    bottom: 20%;
+    padding-left: 55%;
+    font-family: var(--font-default);
+    font-weight: bolder;
+    font-size: 4.5rem;
+    letter-spacing: -5px;
+    color: var(--cor-1);
+}
+
+.img-wrap img{
+    border-radius: 50%;
+}
+
+.typeWriter-section {
+    max-width: 80%;
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+.typeWriter-section-text {
+    font-family: var(--font-default);
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    padding: 1rem;
+}
+
+/* Responsivo Main */
+
+@media screen and (max-width: 1200px) {
+    #principal-content h1{
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #principal-content h1{
+        position: relative;
+        bottom: 0;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .typeWriter-section {
+        max-width: 100%;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .typeWriter-section-text {
+        font-size: 1.2rem;
+        line-height: 2rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 700px){
+    #principal-content h1{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .img-wrap {
+        text-align: center;
+    }
+}
+/* Fim Responsivo Main */
+
+/* Animação de entrada */
+
+.principal {
+    opacity: 0;
+    animation: show 1s .5s forwards;
+}
+
+#principal-content h1 {
+    opacity: 0;
+    animation: show 1s 1.5s forwards;
+}
+
+@keyframes show{
+    100%{
+        opacity: 1;
+    }
+}
+
+/* FIm Animação de entrada */
+
+/* Type Writer */
+
+.typeWriter-section-text::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    opacity: 0;
+    animation: blink .7s 15;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  /* Fim Animação */
+
+
+  #particles-js {
+    position: absolute;
+    height: 100%;
+    top: 10px;
+    z-index: -1;
+  }
