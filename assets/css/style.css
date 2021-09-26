@@ -286,7 +286,8 @@ main {
     }
 
     #particles-js {
-        display: none;
+        /* display: none; */
+        width: 90% !important;
     }
 
     .icons-tech {
