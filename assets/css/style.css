@@ -4,9 +4,9 @@
 /* Varíaveis de cores e fontes */
 :root {
     --cor-1: #fafafa;
-    --cor-2: #060606;
+    --cor-2: #222222;
     --cor-3: #9ed8dc;
-    --cor-4: #dfdfdf;
+    --cor-4: #dedede;
 
     --font-default: 'Montserrat', 'opens sans', sans-serif;
 }
@@ -154,6 +154,7 @@ main {
     text-align: center;
     padding-top: 2rem;
     position: relative;
+    overflow: hidden;
 }
 
 #principal-content h1{
@@ -167,7 +168,7 @@ main {
     color: var(--cor-1);
 }
 
-.img-wrap img{
+.img-wrap img {
     border-radius: 50%;
 }
 
@@ -180,8 +181,10 @@ main {
 .typeWriter-section-text {
     font-family: var(--font-default);
     font-size: 1.4rem;
+    font-weight: 500;
     line-height: 2.2rem;
     padding: 1rem;
+    color: var(--cor-2);
 }
 
 /* Responsivo Main */
