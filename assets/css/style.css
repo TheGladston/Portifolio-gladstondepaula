@@ -141,7 +141,6 @@ main {
 }
 
 .principal {
-    position: relative;
     width: 100%;
     height: 44rem;
     background: var(--cor-3);
@@ -180,11 +179,15 @@ main {
 
 .typeWriter-section-text {
     font-family: var(--font-default);
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 2.2rem;
     padding: 1rem;
     color: var(--cor-2);
+}
+
+.icons-tech {
+    font-size: 6rem;
 }
 
 /* Responsivo Main */
@@ -255,7 +258,6 @@ main {
 .typeWriter-section-text::after {
     content: '|';
     opacity: 1;
-    margin-left: 5px;
     display: inline-block;
     opacity: 0;
     animation: blink .7s 15;
@@ -276,6 +278,5 @@ main {
   #particles-js {
     position: absolute;
     height: 100%;
-    top: 10px;
     z-index: -1;
   }
