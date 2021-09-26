@@ -11,6 +11,9 @@
     --font-default: 'Montserrat', 'opens sans', sans-serif;
 }
 
+/* Fim Varíaveis de cores e fontes */
+/* ########################################################### */
+
 /* Backgrounds e Colors */
 
 .bg-1 {
@@ -32,6 +35,9 @@
  .text-4 {
     color: var(--cor-4) !important;
  }
+
+ /* Fim Backgrounds e Colors */
+ /* ########################################################### */
 
  /* Reutilizáveis */
 
@@ -129,9 +135,31 @@
         background: #dfdfdf;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .logo {
+        font-size: 1.4rem !important;
+    }
+
+    .navbar-toggler {
+        width: 16.7%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .logo {
+        font-size: 1.2rem !important;
+    }
+
+    .navbar-toggler {
+        width: 20%;
+    }
+}
+
 /* Fim Responsivo Navbar */
 
 /* Fim Navbar */
+ /* ########################################################### */
 
 
 /* Main */
@@ -188,6 +216,7 @@ main {
 
 .icons-tech {
     font-size: 6rem;
+    color: var(--cor-1);
 }
 
 /* Responsivo Main */
@@ -209,14 +238,17 @@ main {
 @media screen and (max-width: 900px) {
     .typeWriter-section {
         max-width: 100%;
-        text-align: center;
         padding-top: 0;
     }
 
     .typeWriter-section-text {
-        font-size: 1.2rem;
-        line-height: 2rem;
-        padding: 1rem;
+        padding-left: 1.6rem;
+    }
+
+    .icons-tech {
+        font-size: 5rem;
+        color: var(--cor-1);
+        gap: 1rem !important;
     }
 }
 
@@ -230,6 +262,52 @@ main {
     .img-wrap {
         text-align: center;
     }
+
+    #particles-js {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+      }
+}
+
+@media screen and (max-width: 420px) {
+    .img-wrap img {
+        width: 90%;
+    }
+
+    #principal-content h1{
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+    }
+
+    .typeWriter-section-text {
+        font-size: 1.8rem;
+    }
+
+    #particles-js {
+        display: none;
+    }
+
+    .icons-tech {
+       font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    #principal-content h1{
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    .typeWriter-section-text {
+        font-size: 1rem;
+
+    }
+
+    .icons-tech {
+        font-size: 2.5rem;
+     }
 }
 /* Fim Responsivo Main */
 
@@ -253,6 +331,7 @@ main {
 
 /* FIm Animação de entrada */
 
+
 /* Type Writer */
 
 .typeWriter-section-text::after {
@@ -272,11 +351,17 @@ main {
     }
   }
 
-  /* Fim Animação */
-
+  /* Particles */
 
   #particles-js {
     position: absolute;
     height: 100%;
+    width: 96%;
+    top: 0;
     z-index: -1;
   }
+
+  /* Fim Animação */
+
+  /* Fim Main */
+ /* ########################################################### */
