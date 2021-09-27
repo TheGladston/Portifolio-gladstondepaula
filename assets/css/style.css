@@ -3,7 +3,6 @@
 
 body {
     background: var(--cor-4);
-    height: 1400px;
 }
 
 /* Varíaveis de cores e fontes */
@@ -22,7 +21,23 @@ body {
 /* Backgrounds e Colors */
 
 .bg-1 {
-    background-color: var(--cor-1) !important;
+    background-color: var(--cor-2) !important;
+}
+
+.bg-2 {
+    background-color: #e44d25 !important;
+}
+
+.bg-3 {
+    background-color: #4a90c3 !important;
+}
+
+.bg-4 {
+    background-color: #f0db4f !important;
+}
+
+.bg-5 {
+    background-color: #8c0cfb !important;
 }
 
 .text-1 {
@@ -181,9 +196,7 @@ main {
 
 .img-wrap {
     text-align: center;
-    padding-top: 2rem;
     position: relative;
-    overflow: hidden;
 }
 
 #principal-content h1{
@@ -304,7 +317,7 @@ main {
     }
 
     .typeWriter-section-text {
-        font-size: 1rem;
+        font-size: 1.5rem;
 
     }
 
@@ -326,11 +339,38 @@ main {
     animation: show 1s 1.5s forwards;
 }
 
+.fa-html5 {
+    opacity: 0;
+    animation: show 1s 4s forwards;
+}
+
+.fa-css3-alt {
+    opacity: 0;
+    animation: show 1s 4.5s forwards;
+}
+
+.fa-js-square {
+    opacity: 0;
+    animation: show 1s 5s forwards;
+}
+
+.fa-bootstrap {
+    opacity: 0;
+    animation: show 1s 5.5s forwards;
+}
+
+.fa-git-alt {
+    opacity: 0;
+    animation: show 1s 6s forwards;
+}
+
 @keyframes show{
     100%{
         opacity: 1;
     }
 }
+
+
 
 /* FIm Animação de entrada */
 
@@ -375,8 +415,39 @@ main {
  .portifolio {
      background: var(--cor-1);
      width: 100%;
-     height: 530px;
  }
+
+ .recentes {
+     font-family: var(--font-default);
+     font-size: 1.2rem;
+     font-weight: lighter;
+ }
+
+ .recentes::after {
+     content: "";
+     display: inline-block;
+     position: relative;
+     top: -5px;
+     left: 10%;
+     width: 15rem;
+     height: 1px;
+     background: rgb(203, 203, 203);
+ }
+
+ .recentes::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: -5px;
+    right: 10%;
+    width: 15rem;
+    height: 1px;
+    background: rgb(203, 203, 203);
+}
+
+.techs {
+    color: var(--cor-1);
+}
 
    /* Fim Próxima Section */
  /* ########################################################### */
@@ -385,16 +456,28 @@ main {
 .btn-jump {
     position: absolute;
     color: var(--cor-2);
-    font-size: 4rem;
+    font-size: 3rem;
     margin-top: 1.2rem;
-    animation: elastico 2s infinite;
 }
 
-@keyframes elastico {
-    0%{
-        transform: translate(-2rem, -2rem);
-    }
-    100%{
-        
-    }
+.btn-jump:hover {
+    color: var(--cor-3);
+    font-size: 3.5rem;
+}
+
+.copy-span {
+    position: relative;
+    left: 20px;
+    top: 18px;
+    width: 100%;
+    text-align: left;
+}
+
+.copy {
+    text-decoration: none;
+    color: var(--cor-2);
+    font-family: var(--font-default);
+    font-size: .9rem;
+    font-weight: 300;
+    
 }
