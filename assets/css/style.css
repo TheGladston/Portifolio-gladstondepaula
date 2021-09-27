@@ -13,6 +13,10 @@ body {
     --cor-4: #f5f5f5;
 
     --font-default: 'Montserrat', 'opens sans', sans-serif;
+
+
+    opacity: 0;
+    animation: show 1s .5s forwards;
 }
 
 /* Fim Varíaveis de cores e fontes */
@@ -20,8 +24,12 @@ body {
 
 /* Backgrounds e Colors */
 
+.bg-muted {
+    background-color: rgb(228, 228, 228);
+}
+
 .bg-1 {
-    background-color: var(--cor-2) !important;
+    background-color: var(--cor-1) !important;
 }
 
 .bg-2 {
@@ -37,7 +45,7 @@ body {
 }
 
 .bg-5 {
-    background-color: #8c0cfb !important;
+    background-color: #8139bf !important;
 }
 
 .text-1 {
@@ -223,7 +231,7 @@ main {
 .typeWriter-section-text {
     font-family: var(--font-default);
     font-size: 2rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 2.2rem;
     padding: 1rem;
     color: var(--cor-2);
@@ -410,7 +418,7 @@ main {
  /* ########################################################### */
 
 
- /* Próxima Section  */
+ /* Recentes  */
 
  .portifolio {
      background: var(--cor-1);
@@ -429,7 +437,7 @@ main {
      position: relative;
      top: -5px;
      left: 10%;
-     width: 15rem;
+     width: 12.5rem;
      height: 1px;
      background: rgb(203, 203, 203);
  }
@@ -440,44 +448,79 @@ main {
     position: relative;
     top: -5px;
     right: 10%;
-    width: 15rem;
+    width: 12.5rem;
     height: 1px;
     background: rgb(203, 203, 203);
 }
 
 .techs {
+    font-family: var(--font-default);
+    font-size: 1rem;
     color: var(--cor-1);
 }
 
-   /* Fim Próxima Section */
- /* ########################################################### */
+.card {
+    transition: all 1s;
+}
+
+.card:hover {
+    transform: scale(1.08);
+}
+
+/* Responsivo Recentes */
+
+@media screen and (max-width: 767px)  {
+    .recentes::after {
+        display: none;
+    }
+   
+    .recentes::before {
+       display: none;
+   }
+}
+
+/* Fim Recentes */
+/* ########################################################### */
 
 
 .btn-jump {
     position: absolute;
     color: var(--cor-2);
-    font-size: 3rem;
-    margin-top: 1.2rem;
+    font-size: 2.5rem;
+    margin-top: .8rem;
 }
 
 .btn-jump:hover {
     color: var(--cor-3);
-    font-size: 3.5rem;
+    font-size: 2.7rem;
 }
 
 .copy-span {
     position: relative;
-    left: 20px;
-    top: 18px;
+    left: 5%;
+    top: 12px;
     width: 100%;
-    text-align: left;
 }
 
 .copy {
     text-decoration: none;
     color: var(--cor-2);
     font-family: var(--font-default);
-    font-size: .9rem;
+    font-size: .8rem;
     font-weight: 300;
     
+}
+
+@media screen and (max-width: 420px) {
+    .btn-jump {
+        left: 90% !important;
+    }
+    .copy-span {
+        position: unset;
+        display: flex;
+        justify-content: center;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        
+    }
 }
